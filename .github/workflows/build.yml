@@ -40,10 +40,10 @@ jobs:
       - run: ./guard.sh
       - name: Checkout ip-lists branch
         uses: actions/checkout@v3
-        if: github.event_name == 'schedule' && github.ref == 'refs/heads/master'
+        #if: github.event_name == 'schedule' && github.ref == 'refs/heads/master'
         with:
           ref: ip-lists
           path: ip-lists
       - run: ./upload.sh
-        if: github.event_name == 'schedule' && github.ref == 'refs/heads/master'
+        #if: github.event_name == 'schedule' && github.ref == 'refs/heads/master'
 
